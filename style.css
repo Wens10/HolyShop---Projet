@@ -1,0 +1,22 @@
+* {
+    margin:0;
+    font-family: sans-serif;
+}
+nav {
+    box-shadow: 0 2px 12px 1px #2b5300;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 4rem;
+    justify-content: space-around;
+    align-items: center;
+}
+#links {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+#NOM_ENTREPRISE {
+    font-size: xx-large;
+    font-weight: bolder;
+}
