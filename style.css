@@ -21,13 +21,51 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100%;
-    box-shadow: 0px 1px 3px black;
+    box-shadow: 0px 1px 3px green;
 }
 
 .logo {
     position: relative;
     font-size: 25px;
-    color: blue;
-    text-decoration: none;
+    color: black;
+    text-decoration:;
     font-weight: 700;
+    font-style: italic;
 }
+span{
+    color: green;
+}
+
+
+.navbar a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 30px;
+    transition: 3ms;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: green;
+}
+.btn-contact {
+    background: transparent;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: 3ms;
+}
+
+.btn-contact:hover {
+    background: green;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    transition: 3ms;
+}
+gd
