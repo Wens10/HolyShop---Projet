@@ -28,12 +28,11 @@ body {
     position: relative;
     font-size: 25px;
     color: black;
-    text-decoration:;
-    font-weight: 700;
-    font-style: italic;
+    text-decoration: none;
+    font-weight: 900;
 }
 span{
-    color: green;
+    color:#4CAF50;
 }
 
 
@@ -47,7 +46,7 @@ span{
 }
 .navbar a:hover,
 .navbar a.active {
-    color: green;
+    color:#4CAF50;
 }
 .btn-contact {
     background: transparent;
@@ -61,11 +60,47 @@ span{
 }
 
 .btn-contact:hover {
-    background: green;
+    background: #4CAF50;
     border-radius: 20px;
     font-weight: 600;
     text-decoration: none;
     color: white;
     transition: 3ms;
 }
-gd
+.symbole a{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 100px;
+    padding:10px;
+    color: black;
+    background: transparent;
+    font-size: 15px;
+    transition: 3ms;
+}
+.symbole a:hover{
+    background:#4CAF50;
+    color: white;
+} 
+.search-container {
+    display: flex;
+    justify-content: center;
+   
+}
+.search-box {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.search-button {
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
