@@ -6,7 +6,7 @@
 }
 
 body {
-    background: white;
+    background: black radial-gradient(circle, #1e534a 15%, rgb(34, 63, 38) 100%);
     color: black;
 }
 
@@ -17,12 +17,12 @@ body {
     left: 0;
     width: 100%;
     padding: 25px;
-    background: transparent;
+    background: whitesmoke;
   
     justify-content: space-between;
     align-items: center;
     z-index: 100%;
-    box-shadow: 0px 1px 3px green;
+    box-shadow: 1px 3px 9px black;
 }
 
 .container{
@@ -57,27 +57,22 @@ span{
     transition: 3ms;
 }
 .navbar a:hover,
-.navbar a.active {
-    color:#4CAF50;
+.navbar a.active  {
+    text-decoration: underline 3px #4CAF50;
+    
 }
 .btn-contact {
     background: transparent;
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 20px;
+
     font-weight: 600;
     text-decoration: none;
     color: black;
     transition: 3ms;
 }
 
-.btn-contact:hover {
-    background: #4CAF50;
-    border-radius: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
-    transition: 3ms;
+.btn-contact:hover,
+ #active {
+    text-decoration: underline 3px #4CAF50;
 }
 .symbole a{
     position: relative;
@@ -141,7 +136,7 @@ form button {
     transition: 3ms;
 }
 form button:hover{
-    background-color: gray;
+    background-color: black;
     color:#4CAF50;
 }
 .user{
@@ -155,8 +150,9 @@ form button:hover{
 form {
     display: flex;
     flex-direction: column;
-    border:#4CAF50 solid 2px ;
-    border-radius: 2px;
+    background-color: whitesmoke;
+    border:black solid 2px ;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -178,6 +174,7 @@ form input, form textarea {
     margin-top: 5px;
     padding: 10px;
     border: 1px solid #fff;
+    border-radius: 7px;
     background-color:gray;
     color: #fff;
 }
