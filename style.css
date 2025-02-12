@@ -57,7 +57,7 @@ span{
     transition: 3ms;
 }
 .navbar a:hover,
-.navbar a.active  {
+.navbar a.active , .navbar #action {
     text-decoration: underline 3px #4CAF50;
     
 }
@@ -110,8 +110,8 @@ span{
    
 }
 .search-box {
-    width: 300px;
-    padding: 10px;
+    width: 200px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -171,6 +171,7 @@ form label {
     font-size: 15px;
 }
 form input, form textarea {
+    width: 500px;
     margin-top: 5px;
     padding: 10px;
     border: 1px solid #fff;
