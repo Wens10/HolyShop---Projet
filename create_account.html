@@ -7,9 +7,93 @@
     <title>Formulaire de Contact</title>
     
     <link rel="stylesheet" href="style.css">
+    <script src="responsive.js" defer></script>
 
 </head>
 <style>
+section{
+ 
+    background: transparent;
+    border: 2px xolid rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    width: 450px;
+    border-radius: 20px;
+}
+section h2{
+   font-size: 30px;
+   text-align: center;
+   color: #fff;
+   margin-bottom: 20px;
+
+}
+.input-box{
+   width: 100%;
+   position: relative;
+    margin-bottom: 25px;
+}
+.input-box input{
+    width: 100%;
+    padding: 15px;
+    background-color:transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    outline: none;
+    color: #fff;
+    padding-right: 40px;
+    border-radius: 25px;
+}
+.input-box input::placeholder{
+    color: #fff;
+}
+.remember-forgot a, .register-link a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: bold;  
+}
+.remember-forgot a:hover , .register-link a{
+    text-decoration: underline;
+
+}
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.login-btn{
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition:0.5s;
+}
+.login-btn:hover{
+    background-color: green;
+    color: black;
+    border: 2px solid rgba(255,255,255,0.2)
+    color#fff;
+}
+.register-link{
+    text-align: center;
+    margin-top: 25px;
+    color: #fff;
+    font-size: 14px;
+}
+body{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: url(img/cosmetiques-bio.png);
+   background-position: center;
+   background-size: cover;
+}
+
+
     /* Styles pour le menu hamburger */
 .hamburger-menu {
     display: none;
@@ -142,72 +226,34 @@
        </div>
         
      </header>
-     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger-menu");
-    const navbar = document.querySelector(".navbar");
 
-    hamburger.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-      
-    });
-});
-     </script>
          
        <!-- Formulaire de création de compte -->
 
-     <main>
-        <div class="compte">
-           <h2>Créer un compte</h2>
+    <section>
+        <h2>Connexion</h2>
+    
+            
+        <div class="input-box">
+        <input type="text"placeholder="Nom utilisateur"  required>    
         </div>
-        <br>
-        <div class="user">
-            <form method="post" action="#">
-                <label for="username" class="username">Nom d'utilisateur:</label>
-                <input type="text" id="username" name="username" required>
-                <br>
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" firstname="firstname" required>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="password" class="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <button type="submit" class="button_compte">Créer un compte</button>
-            </form>
+        <div class="input-box">
+        <input type="password"placeholder="Mot de passe"  required>    
         </div>
-    </main>
-    <main class="account">
-        <div class="compte">
-           <h2>Créer un compte</h2>
+        <div class="remember-forgot">
+        <label><input type="checkbox">Se souvenir de moi</label>
+        <a href="">Mot de passe oublié ?</a>
         </div>
-        <br>
-        <div class="user">
-            <form method="post" action="#">
-                <label for="username" class="username">Nom d'utilisateur:</label>
-                <input type="text" id="username" name="username" required>
-                <br>
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
-                <br>
-                <label for="firstname">Prénom</label>
-                <input type="text" id="firstname" firstname="firstname" required>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
-                <label for="password" class="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <button type="submit" class="button_compte">Créer un compte</button>
-            </form>
-        </div>
-    </main>
+
+        <button type="submit" class="login-btn">Se connecté</button>
+        <DIv class="register-link">
+            <p>Vous n'avez pas de compte ? <a href="inscription.html">Inscription</a></p>
+        </DIv>
+        
+    </section>
+           
+        
+    
 
     
 </body>

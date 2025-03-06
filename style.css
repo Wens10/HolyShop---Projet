@@ -8,6 +8,7 @@
 body {
     background: black radial-gradient(circle, #1e534a 15%, rgb(34, 63, 38) 100%);
     color: black;
+
 }
 
 .header {
@@ -150,8 +151,8 @@ form button:hover{
 form {
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
-    border:black solid 2px ;
+    background-color: transparent;
+    border:whitesmoke solid 1px ;
     border-radius: 10px;
     padding: 10px;
 }
@@ -162,7 +163,7 @@ form label {
 }
 .username{
     display: flex;
-    justify-content: center;
+    
     font-size: 15px;
 }
 .password{
@@ -178,13 +179,14 @@ form input, form textarea {
     border-radius: 7px;
     background-color:gray;
     color: #fff;
+    cursor: pointer;
 }
 
 form button {
     margin-top: 20px;
 }
 main{
-        margin-top: 15%;
+        
 }
 .user{
     display: flex;

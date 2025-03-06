@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="responsive.js" defer></script>
 </head>
 <style>
+body{
+    display: flex;
+    align-items: center;
+    height: 60vh;
+}
     /* Styles pour le menu hamburger */
 .hamburger-menu {
     display: none;
@@ -125,17 +131,6 @@
        </div>
         
      </header>
-     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger-menu");
-    const navbar = document.querySelector(".navbar");
-
-    hamburger.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-      
-    });
-});
-     </script>
 
      <main>
         <h2>Vos Favoris</h2>
