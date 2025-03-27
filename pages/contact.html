@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <title>Formulaire de Contact</title>
+    
     <link rel="stylesheet" href="style.css">
+    <script src="responsive.js" defer></script>
+
 </head>
 <style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(img/cosmetiques-bio.png);
+    background-position: center;
+    background-size: cover;
+}
     /* Styles pour le menu hamburger */
 .hamburger-menu {
     display: none;
@@ -26,6 +39,10 @@
 .search{
     display: none;
 }
+.contacte{
+    display: none;
+}
+
 /* Mode responsive */
 @media screen and (max-width: 768px) {
     .hamburger-menu {
@@ -75,6 +92,19 @@
     .navbar.active {
         display: flex;
     }
+    .main{
+        display: none;
+    }
+    form input, form textarea {
+    width: 200px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    background-color:gray;
+    color: #fff;
+}
+
  
 }
 
@@ -110,13 +140,13 @@
                     <span></span>
                 </div>
                 <nav class="navbar">
-                     <a href="index.html" class="active">ACCUEIL</a>
-                     <a href="#">SERVICES</a>
+                     <a href="index.html">ACCUEIL</a>
+                     <a href="services.html">SERVICES</a>
                      <a href="#">PRODUITS</a>  <!-- Ce lien nous mène à la liste des produits -->
-                     <a href="" class="petit-ecran">FAVORIS</a>
-                     <a href="" class="petit-ecran">PANIER</a>
-                     <a href="" class="petit-ecran">COMPTE</a>
-                     <a href="contact.html" class="btn-contact">CONTACT</a>
+                     <a href="favorites.html" class="petit-ecran">FAVORIS</a>
+                     <a href="cart.html" class="petit-ecran">PANIER</a>
+                     <a href="create_account.html" class="petit-ecran">COMPTE</a>
+                     <a href="contact.html" class="btn-contact" id="active">CONTACT</a>
                      
                 </nav>
         <div class="symbole">
@@ -125,19 +155,30 @@
        </div>
         
      </header>
-     <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger-menu");
-    const navbar = document.querySelector(".navbar");
 
-    hamburger.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-      
-    });
-});
-     </script>
-     <section class="container">
-      
-     </section>
+     <main class="contactes" >
+        <br>
+        <br>
+        <br>
+        <div class="contact">
+          <h2>Contactez-nous</h2><br>
+        </div><br>
+        <div class="message">
+         <form action="https://formspree.io/f/{your_form_id}" method="POST" class="Contact-css">
+            <label for="name">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Envoyer</button>
+         </form> 
+        </div>
+
+    </main>
+
 </body>
 </html>

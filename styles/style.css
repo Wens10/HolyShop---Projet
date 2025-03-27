@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+   
+    background:white;
+  
+}
+
+.header {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+    padding-bottom: 5px;
+    background: whitesmoke;
+    align-items: center;
+    z-index: 100%;
+    height: max-content;
+    box-shadow: 1px 3px 9px black;
+}
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+    margin-top: 2%;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+/* logo style */
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+span{
+    color:#4CAF50;
+}
+
+/* Navbar style */
+
+.navbar a {
+    font-size: 13px;
+    color: black;
+    margin-left: 900px;
+    background-color: transparent;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: 60;
+    margin-left: 30px;
+    transition: 3ms;
+}
+.navbar a:hover,
+.navbar a.active , .navbar #action {
+    background-color:rgba(0, 0, 0, 0.404);
+    
+}
+.btn-contact {
+    background: transparent;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: 3ms;
+}
+
+.btn-contact:hover,
+ #active {
+    text-decoration: underline 3px #4CAF50;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+   
+}
+.search-box {
+    width: 1000px;
+    padding: 8px;
+    border: 1px solid #ccc;
+
+}
+.search-box:focus {
+    outline: none;
+    border: 1px solid #4CAF50;
+}
+.search-button {
+    padding: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+header{
+ flex: 1 0 auto;
+}
+
+footer {
+ flex-shrink: 0;
+ border-top: 1px solid black;
+ width: 100%;
+ background: whitesmoke;
+ color: black;
+ position: fixed;
+ bottom: 0;
+ padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.liste-services a{
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+}
+.liste-horaires{
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+.Parfum-femme {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Parfum-femme a {
+
+    color: whitesmoke;
+}
+
+.Parfum-homme {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+.Parfum-homme a {
+
+    color: whitesmoke;
+}
+
+.Parfum-femme {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.Parfum-femme a {
+
+    color: whitesmoke;
+}
+
+.Parfum-homme {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.container-list {
+    display: flex;
+    
+}
+.container-list div{
+   margin: 35px;
+}
+.container-list a{
+   margin-bottom: 10px;
+   text-decoration: none;
+}
+div div .cathégorie-nom{
+    color: green;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Parfum, .Maquillage, .Cheveux, .Visage, .Corps {
+    flex: wrap;
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(78, 76, 76);
+    padding: 0;
+    position: absolute;
+    z-index: 100;
+}
