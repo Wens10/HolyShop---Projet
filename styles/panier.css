@@ -1,0 +1,283 @@
+#panier {
+  height: 100%;
+  display: flex;
+}
+
+#panier_gauche {
+  margin-top: 5%;
+  margin-left: 18%;
+  padding: 30px;
+  border-radius: 3px;
+  width: 40%;
+  height: 60vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+#panier_droit {
+  width: 30%;
+  margin-top: 10%;
+  margin-right: 2cm;
+  padding: 20px;
+  height: 60%;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 18px green;
+  margin-left: 30px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+#ligne {
+  height: 3px;
+  width: 140px;
+  background-color: black;
+}
+
+.payment-method {
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: green;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+.payment-method:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+.payment-method:active .button_top {
+  transform: translateY(0);
+}
+
+#img{
+  margin: 10px;
+}
+
+#article_ajouté {
+  display: flex;
+  grid-row: 1;
+}
+
+#article_ajouté, p {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#description {
+  width: 100%;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: 50%;
+}
+
+.container svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  transition: all 0.3s;
+  fill: #666;
+  margin-top: 1cm;
+  margin-left: 1cm;
+}
+
+.container svg:hover {
+  transform: scale(1.1);
+}
+
+#nom_prix p {
+  width: 50%;
+}
+
+.ligne {
+  height: 1px;
+  background: gray;
+  border-radius: 1px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+#nom_prix {
+  display: flex;
+}
+
+#prix {
+  text-align: right;
+}
+
+.favoris-form, .remove-form {
+  margin-left: 2.5rem;
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 50%;
+}
+
+.favoris-btn, .poubelle-btn {
+  border: none;
+  background: none;
+  width: max-content;
+  cursor: pointer;
+}
+
+form[action="/favorites/remove"] .favoris-btn svg {
+  fill: #E3474F;
+}
+
+.favoris-btn svg {
+  fill: gray;
+}
+
+.favoris-form label, .remove-form label {
+  margin-top: 10px;
+  width: 100%;
+}
+
+label {
+  width: 50%;
+}
+
+#articles {
+  margin-top: 7rem;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 1024px) {
+  #panier {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #panier_gauche,
+  #panier_droit {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #ligne {
+    width: 120px;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+/* Responsive styles for smaller tablets */
+@media (max-width: 768px) {
+  #panier {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #panier_gauche,
+  #panier_droit {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  #ligne {
+    width: 100px;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  #panier_gauche,
+  #panier_droit {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  #ligne {
+    width: 80px;
+  }
+
+  .container svg {
+    height: 20px;
+    width: 20px;
+    margin-top: 0.5cm;
+    margin-left: 0.5cm;
+  }
+}
+.payment-icon {
+  width: 65px;
+  height: auto;
+  margin-right: 10px;
+}
+.payment-icon1 {
+  width: 49px;
+  height: auto;
+  margin-right: 10px;
+}
+.payment-icon2 {
+  width: 45px;
+  height: auto;
+  margin-right: 10px;
+}

@@ -6,9 +6,12 @@
 }
 
 body {
-   
+    min-height: 100vh;
     background:white;
-  
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -19,9 +22,11 @@ body {
     padding-bottom: 5px;
     background: whitesmoke;
     align-items: center;
-    z-index: 100%;
+    z-index: 200%;
     height: max-content;
     box-shadow: 1px 3px 9px black;
+    position: sticky;
+    top: 0;
 }
 .navbar-container{
     display: flex;
@@ -115,15 +120,18 @@ header{
  flex: 1 0 auto;
 }
 
+main {
+ flex: 1;
+}
+
 footer {
  flex-shrink: 0;
  border-top: 1px solid black;
  width: 100%;
  background: whitesmoke;
  color: black;
- position: fixed;
- bottom: 0;
  padding: 20px;
+ position: relative;
 }
 
 .footer-container {
@@ -214,6 +222,21 @@ div div .cathégorie-nom{
     align-items: center;
     background-color: rgb(78, 76, 76);
     padding: 0;
-    position: absolute;
+    position:absolute;
     z-index: 100;
+}
+
+.panier {
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt {
+    font-size: 10px;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

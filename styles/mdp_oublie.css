@@ -1,0 +1,138 @@
+#error {
+  margin-top: 1rem;
+  color: #ff0000;
+  width: max-content;
+  padding: 1rem;
+  background: rgba(197, 25, 25, 0.25);
+  border-radius: 10px;
+  border: 2px solid #ff0000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: fit-content;
+}
+
+#mdp {
+  margin: auto;
+  width: max-content;
+  padding: 30px;
+  border: 1px solid green;
+  background-color: rgba(42, 156, 22, 0.653);
+  border-radius: 10px;
+  margin-top: 1%;
+  margin-bottom: 1px;
+}
+
+h3 {
+  max-width: max-content;
+  margin-bottom: 1cm;
+}
+
+#help {
+  margin-top: 30px;
+  background-color:transparent;
+  width: 280px;
+  
+}
+
+#code1 {
+  margin-top: 25px;
+  
+  font-weight: 100;
+
+}
+
+#code {
+  margin-top: 3px;
+  border-radius: 10px;
+  height: 30px;
+  background-color: transparent;
+  width: 280px;
+  font-weight: 300;
+}
+
+.payment-method {
+  --button_radius: 0.75em;
+  --button_color: rgb(94, 219, 94);
+  --button_outline_color: #000000;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  width: max-content;
+ 
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.25em 0.60em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+  width: max-content;
+}
+
+.payment-method:hover .button_top {
+  transform: translateY(-0.33em);
+}
+
+.payment-method:active .button_top {
+  transform: translateY(0);
+}
+
+.valider {
+  flex-direction: column;
+  display: flex;
+}
+
+#mail {
+  font-weight: 300;
+  background-color: transparent;
+  border-radius: 10px;
+  height: 30px;
+  width: 280px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #mdp {
+    width: 80%;
+    padding: 20px;
+  }
+
+  #mail {
+    width: 100%;
+  }
+
+  .payment-method {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #mdp {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .button_top {
+    padding: 0.2em 0.5em;
+  }
+
+  #mail {
+    width: 100%;
+    height: 25px;
+  }
+}

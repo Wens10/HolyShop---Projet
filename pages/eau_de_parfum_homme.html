@@ -1,82 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Holy Shop | create_account</title>
-
+    <title>Holy Shop | </title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="shortcut icon" href="img/online-shop-ecommerce-svgrepo-com.svg">
     <script src="/scripts/hover.js" defer></script>
-
 </head>
 <style>
-    form {
-        display: flex;
-        flex-direction: column;
-        background: rgba(42, 156, 22, 0.653);
-        padding: 30px;
-        width: auto;
-        border-radius: 20px;
-        margin-top: 50px;
-    }
-
-
-    h2 {
+    h1 {
         text-align: center;
-        color: #333;
-        margin-bottom: 20px;
     }
 
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 5px;
-        color: #555;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
-
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-        background-color: whitesmoke;
-    }
-
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="password"]:focus {
-        border-color: #4CAF50;
-        outline: none;
-    }
-
-    .btn-submit {
-        background-color: black;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-    .btn-submit:hover {
-        background-color: green;
-    }
-
-    .form-container {
-        display: flex;
-        justify-content: center;
+    .Parfum,
+    .Maquillage,
+    .Cheveux,
+    .Visage,
+    .Corps {
+        flex: wrap;
+        display: none;
+        width: 100%;
+        justify-content: space-between;
         align-items: center;
-        height: 50vh;
+        background-color: rgb(78, 76, 76);
+        padding: 0;
+        position: relative;
+        z-index: 0;
     }
 
     .panier {
@@ -90,14 +41,164 @@
 
     .cart {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        height: max-content;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 9px 15px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        padding: 15px;
+        width: 200px;
+        text-align: center;
+
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+
+    .card h2 {
+        font-size: 16px;
+        margin: 8px 0;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        background-color: transparent;
+        height: 30px;
+    }
+
+    .buttons button {
+        border: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 2px solid black;
+        cursor: pointer;
+    }
+
+
+    /* From Uiverse.io by LilaRest */
+    #heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        box-shadow: rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: #e8e8e8;
+        border-color: #ffe2e2;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 15px;
+        transition: transform 400ms cubic-bezier(.68, -0.55, .27, 2.5),
+            border-color 400ms ease-in-out,
+            background-color 400ms ease-in-out;
+        word-spacing: -2px;
+
+    }
+
+    @keyframes movingBorders {
+        0% {
+            border-color: #fce4e4;
+        }
+
+        50% {
+            border-color: #ffd8d8;
+        }
+
+        90% {
+            border-color: #fce4e4;
+        }
+    }
+
+    #heart:hover {
+        background-color: #eee;
+        transform: scale(105%);
+        animation: movingBorders 3s infinite;
+    }
+
+    .filled,
+    .empty {
+        fill: rgb(255, 110, 110);
+        transition: opacity 100ms ease-in-out;
+    }
+
+    .filled {
+        position: absolute;
+        opacity: 0;
+    }
+
+    @keyframes beatingHeart {
+        0% {
+            transform: scale(1);
+        }
+
+        15% {
+            transform: scale(1.15);
+        }
+
+        30% {
+            transform: scale(1);
+        }
+
+        45% {
+            transform: scale(1.15);
+        }
+
+        60% {
+            transform: scale(1);
+        }
+    }
+
+    #heart:hover .empty {
+        opacity: 0;
+    }
+
+    #heart:hover .filled {
+        opacity: 1;
+        animation: beatingHeart 1.2s infinite;
+    }
+
+
+    .cart-btn {
+        background-color: #28a745;
+        color: white;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .cart-btn:hover {
+        background-color: black;
+        color: green;
+        font-weight: bold;
     }
 </style>
 
-
-
 <body>
+
     <main>
         <header class="header">
             <div class="navbar-container">
@@ -199,32 +300,71 @@
         </div>
         
         
-        <!-- Formulaire de création de compte -->
+        <br><br>
+        <h1>Eau de parfums pour hommes</h1>
+        <div class="card">
+            <img loading="lazy" alt="Chopard Oud Malaki Eau de Parfum pour homme 80 ml"
+                src="https://cdn.notinoimg.com/list_2k//chopard/3607347336914_01-o__220722.jpg"
+                srcset="https://cdn.notinoimg.com/list//chopard/3607347336914_01-o__220722.jpg 160w, https://cdn.notinoimg.com/list_2k//chopard/3607347336914_01-o__220722.jpg 320w"
+                style="width: 66px; height: auto;">
+            <h2>Chopard</h2>
+            <h3>Oud Malaki</h3>
+            <p>Eau de Parfum pour homme 80 ml</p>
+            <p style="color: red; font-weight: bold;">56,60€</p>
+            <div class="buttons">
+                <!-- From Uiverse.io by LilaRest -->
+                <button id="heart">
+                    <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+                        <path fill="none" d="M0 0H24V24H0z"></path>
+                        <path
+                            d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z">
+                        </path>
+                    </svg>
+                    <svg class="filled" height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H24V24H0z" fill="none"></path>
+                        <path
+                            d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z">
+                        </path>
+                    </svg>
+                </button>
 
-        <div class="form-container">
-            <form action="créer un compte.php" method="post">
-                <h2>Créer un compte</h2>
-                <div class="form-group">
-                    <label for="username">Nom d'utilisateur</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Adresse e-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Mot de passe</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirmer le mot de passe</label>
-                    <input type="password" id="password2" name="password2" required>
-                </div>
-                <button type="submit" class="btn-submit">Créer un compte</button>
-            </form>
+                <button class="cart-btn">Ajouter</button>
+            </div>
         </div>
-    </main>
 
+        <div class="card">
+            <img loading="lazy" alt="Afnan Turathi Homme Blue Eau de Parfum pour homme 90 ml"
+                src="https://cdn.notinoimg.com/list_2k//afnan/6290171070580_01-o__211006.jpg"
+                srcset="https://cdn.notinoimg.com/list//afnan/6290171070580_01-o__211006.jpg 160w, https://cdn.notinoimg.com/list_2k//afnan/6290171070580_01-o__211006.jpg 320w"
+                style="width: 111px; height: auto;">
+            <h2>Afnan</h2>
+            <h3>Turathi Homme Blue</h3>
+            <p>Eau de Parfum pour homme 90 ml</p>
+            <p style="color: red; font-weight: bold;">40,00€</p>
+            <div class="buttons">
+                <!-- From Uiverse.io by LilaRest -->
+                <button id="heart">
+                    <svg class="empty" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+                        <path fill="none" d="M0 0H24V24H0z"></path>
+                        <path
+                            d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2zm-3.566 15.604c.881-.556 1.676-1.109 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5 5.56 5 4 6.656 4 9c0 2.944 1.666 5.533 4.645 7.903.745.592 1.54 1.145 2.421 1.7.299.189.595.37.934.572.339-.202.635-.383.934-.571z">
+                        </path>
+                    </svg>
+                    <svg class="filled" height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H24V24H0z" fill="none"></path>
+                        <path
+                            d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z">
+                        </path>
+                    </svg>
+                </button>
+
+                <button class="cart-btn">Ajouter</button>
+            </div>
+        </div>
+
+
+
+    </main>
 
     <style>
         .footer-social a{ 
