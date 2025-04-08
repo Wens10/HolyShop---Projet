@@ -36,6 +36,9 @@
 </style>
 
 <body>
+
+    <script src="/scripts/fav.js"></script>
+
     <main>
        
         <header class="header">
@@ -127,8 +130,15 @@
                 <h2>
                     Vos favoris
                 </h2>
-                <br>
-                <p>Vous n'avez rien dans vos favoris.</p>
+                <div id="favorites-list">
+                    <!-- Les favoris seront affichés ici-->
+                </div>
+                <script>
+                    // Charger les favoris dès que la page est prête
+                    document.addEventListener('DOMContentLoaded', function() {
+    loadFavorites();
+});
+                </script>
             </div>
 
         </div>

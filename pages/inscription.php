@@ -1,3 +1,41 @@
+<?php
+// Connexion à la base de données
+require_once('db_connection.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les valeurs du formulaire
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password2 = $_POST['password2'];
+
+    // Validation des champs
+    if (empty($username) || empty($email) || empty($password) || empty($password2)) {
+        echo "Tous les champs sont obligatoires.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "L'adresse email est invalide.";
+    } elseif ($password != $password2) {
+        echo "Les mots de passe ne correspondent pas.";
+    } else {
+        // Sécuriser le mot de passe
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Vérifier si l'email existe déjà
+        $stmt = $pdo->prepare("SELECT * FROM comptes WHERE email = :email");
+        $stmt->execute(['email' => $email]);
+        if ($stmt->rowCount() > 0) {
+            echo "L'email est déjà utilisé.";
+        } else {
+            // Insérer l'utilisateur dans la base de données
+            $stmt = $pdo->prepare("INSERT INTO comptes (username, email, password) VALUES (:username, :email, :password)");
+            $stmt->execute(['username' => $username, 'email' => $email, 'password' => $hashed_password]);
+
+            echo "Compte créé avec succès. Vous pouvez maintenant vous connecter.";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
