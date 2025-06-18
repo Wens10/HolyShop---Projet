@@ -19,7 +19,7 @@ Ce projet ne vise pas la vente réelle de produits, mais sert de vitrine techniq
 
 - **HTML5** — structure du site  
 - **CSS3** — mise en page, responsive design  
-- **JavaScript (Vanilla)** — interactions de base côté client  
+- **JavaScript** — interactions de base côté client  
 - **SQL** — stockage et gestion des données produits
 
 Par : - Manuella TSOUMOU
